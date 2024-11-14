@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Obsidian
-Exec=/home/francesco/Apps/Obsidian-1.7.6.AppImage -enable-features=UseOzonePlatform -ozone-platform=wayland
+#Exec=/home/francesco/Apps/Obsidian-1.7.6.AppImage -enable-features=UseOzonePlatform -ozone-platform=wayland
+Exec=/usr/bin/obsidian
 Icon=/path/to/icon.png
 Type=Application
 Categories=Utility;
