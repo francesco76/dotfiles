@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[en_US]=Revolutionary new tools for editing, visual effects, color correction and professional audio post production, all in a single application!
+Comment=Revolutionary new tools for editing, visual effects, color correction and professional audio post production, all in a single application!
+Exec=/opt/resolve/bin/resolve --enable-features=UseOzonePlatform --ozone-platform=wayland %u
+GenericName[en_US]=DaVinci Resolve
+GenericName=DaVinci Resolve
+Icon=/opt/resolve/graphics/DV_Resolve.png
+MimeType=application/x-resolveproj;
+Name[en_US]=DaVinci Resolve
+Name=DaVinci Resolve
+Path=/opt/resolve/
+StartupNotify=true
+StartupWMClass=resolve
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-KDE-SubstituteUID=false
+X-KDE-Username=

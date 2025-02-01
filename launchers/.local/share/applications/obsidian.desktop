@@ -1,8 +1,9 @@
 [Desktop Entry]
-Name=Obsidian
+Name=Obsidian Wayland
 #Exec=/home/francesco/Apps/Obsidian-1.7.6.AppImage -enable-features=UseOzonePlatform -ozone-platform=wayland
-Exec=/usr/bin/obsidian
-Icon=/path/to/icon.png
+Exec=/usr/bin/obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland
+Icon=obsidian
+comment=Obsidian
 Type=Application
-Categories=Utility;
+Categories=Office;
 MimeType=x-scheme-handler/obsidian;

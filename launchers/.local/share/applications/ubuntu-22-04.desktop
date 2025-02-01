@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Ubuntu-22-04
+GenericName=Terminal entering Ubuntu-22-04
+Comment=Terminal entering Ubuntu-22-04
+Categories=Distrobox;System;Utility
+Exec=/usr/bin/distrobox enter  ubuntu-22-04
+Icon=/home/francesco/.local/share/icons/distrobox/ubuntu.png
+Keywords=distrobox;
+NoDisplay=false
+Terminal=true
+TryExec=/usr/bin/distrobox
+Type=Application
+Actions=Remove;
+
+[Desktop Action Remove]
+Name=Remove Ubuntu-22-04 from system
+Exec=/usr/bin/distrobox rm  ubuntu-22-04
