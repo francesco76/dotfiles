@@ -1,0 +1,7 @@
+docker network create \
+  --driver bridge \
+  --subnet 10.89.0.0/24 \
+  --gateway 10.89.0.1 \
+  --label com.docker.compose.project=mediaserver \
+  --label io.podman.compose.project=mediaserver \
+  mediaserver_default

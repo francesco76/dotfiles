@@ -1,0 +1,71 @@
+services:
+  sonarr:
+    image: linuxserver/sonarr
+    container_name: sonarr
+    ports:
+      - 8989:8989
+    volumes:
+      - ~/.config/sonarr/config:/config
+      - ~/Videos/tv:/tv
+      - ~/Videos/downloads:/downloads
+    networks:
+      mediaserver_default:
+        ipv4_address: 10.89.0.2  
+    restart: unless-stopped
+
+  deluge:
+    image: lscr.io/linuxserver/deluge:latest
+    container_name: deluge
+    environment:
+      - PUID=1000              # Replace with your user ID
+      - PGID=1000              # Replace with your group ID
+      - TZ=Europe/Rome         # Replace with your timezone
+    volumes:
+      - ~/.config/deluge/config:/config  # Configuration files
+      - ~/Videos/downloads:/downloads  # Torrents and completed files
+      - ~/Downloads/torrents:/torrents    # Optional: for organization
+    ports:
+      - 8112:8112              # Web UI
+      - 58846:58846            # Daemon
+      - 58946:58946/tcp        # Torrent traffic
+      - 58946:58946/udp
+    networks:
+      mediaserver_default:
+        ipv4_address: 10.89.0.3
+    restart: unless-stopped
+
+  prowlarr:
+    image: linuxserver/prowlarr
+    container_name: prowlarr
+    environment:
+      - PUID=1000                 # Replace with your user ID
+      - PGID=1000                 # Replace with your group ID
+      - TZ=Europe/Rome            # Replace with your timezone
+    volumes:
+      - ~/.config/prowlarr:/config  # Prowlarr configuration directory
+    ports:
+      - "9696:9696"               # Web UI port
+    networks:
+      mediaserver_default:
+        ipv4_address: 10.89.0.4  # Fixed IP for Prowlarr (optional)
+    restart: unless-stopped
+
+  jellyfin:
+    image: linuxserver/jellyfin:latest
+    container_name: jellyfin
+    ports:
+      - "8096:8096"
+      - "8920:8920" # Optional for HTTPS
+    volumes:
+      - ~/.config/jellyfin/config:/config
+      - ~/.jellyfin/cache:/cache
+      - ~/Videos/tv:/media
+    networks:
+      mediaserver_default:
+        ipv4_address: 10.89.0.5
+    restart: unless-stopped
+
+
+networks:
+  mediaserver_default:
+    external: true
