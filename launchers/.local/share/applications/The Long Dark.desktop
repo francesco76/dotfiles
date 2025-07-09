@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=The Long Dark
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/305620
+Icon=steam_icon_305620
+Terminal=false
+Type=Application
+Categories=Game;

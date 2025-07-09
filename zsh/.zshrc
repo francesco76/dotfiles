@@ -7,7 +7,7 @@ export PATH="$PATH:$HOME/.atuin/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export QT_QPA_PLATFORM=wayland
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
-
+export HYPRLAND_RENDERER_BACKEND=vulkan
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,

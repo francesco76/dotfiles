@@ -16,6 +16,8 @@ export PATH=$PATH:.atuin/bin
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
+export HYPRLAND_RENDERER_BACKEND=vulkan
+
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
     for rc in ~/.bashrc.d/*; do
